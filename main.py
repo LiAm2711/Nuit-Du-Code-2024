@@ -1,6 +1,5 @@
 import pyxel
 from math import sqrt
-import os
 
 # ==================================== PAGES ====================================
 class Accueil:
@@ -223,8 +222,8 @@ class Lancer:
         self.stop = False
         self.distance_rouge = 0
         self.distance_bleu = 0
-        self.plot_rouge = [0, 0]
-        self.plot_bleu = [10, 0]
+        self.plot_rouge = [6, 10]
+        self.plot_bleu = [13, 10]
         self.zones = [[(61, 50), (70, 40)], [(95, 80), (110,61)], [(138, 111), (155, 75)], [(174, 144), (200, 98)], [(212, 176), (241, 132)]]
         self.gagnant = "..."
         
