@@ -21,10 +21,31 @@ class Jeux:
 
     def draw(self):
         pyxel.cls(0)
+
+        pyxel.rect(0,0,256,256,11)
+        pyxel.circ(10,10,8,7)
+        pyxel.circ(10,10,6,11)
+        pyxel.circb(0,0,50,7)
+        pyxel.circb(0,0,100,7)
+        pyxel.circb(0,0,150,7)
+        pyxel.circb(0,0,200,7)
+        pyxel.circb(0,0,250,7)
+        pyxel.circb(0,0,300,7)
+        pyxel.tri(12,19,253,245,2,253,11)
+        pyxel.tri(0,29,0,256,256,256,11)
+        pyxel.tri(19,12,256,83,256,1,11)
+        pyxel.rect(40,0,250,20,11)
+        pyxel.line(12,18,253,241,7)
+        pyxel.line(17,12,255,85,7)
         '''
         #pour ping pong
         pyxel.rect(0,0,256,256,5)
-        pyxel.rect(0,10,256,256,7)
+        pyxel.rect(0,0,10,256,7)
+        pyxel.rect(246,0,250,256,7)
+        pyxel.rect(0,0,256,10,7)
+        pyxel.rect(10,246,256,256,7)
+        pyxel.line(0,128,245,128,7)
+        pyxel.line(128,10,128,245,0)
         '''
         '''
         #Pour Menu
@@ -75,7 +96,7 @@ class Jeux:
         pyxel.circ(self.nuage.x + 16, self.nuage.y - 2, self.nuage.r, self.nuage.coul)
         '''
 
-
+'''
         #arriére plan jeux corde
         pyxel.rect(0,0,256,256,6)
         pyxel.circ(256,1350,1220,11)
@@ -111,7 +132,7 @@ class Jeux:
         pyxel.circ(self.nuage_jeux_de_corde_3.x + 5, self.nuage_jeux_de_corde_3.y - 2, self.nuage_jeux_de_corde_3.r, self.nuage_jeux_de_corde_3.coul)
         pyxel.circ(self.nuage_jeux_de_corde_3.x + 11, self.nuage_jeux_de_corde_3.y, self.nuage_jeux_de_corde_3.r, self.nuage_jeux_de_corde_3.coul)
         pyxel.circ(self.nuage_jeux_de_corde_3.x + 16, self.nuage_jeux_de_corde_3.y - 2, self.nuage_jeux_de_corde_3.r, self.nuage_jeux_de_corde_3.coul)
-
+'''
 
 class Joueur:
     def __init__(self, x, y, coul_corp, coul_bras):
