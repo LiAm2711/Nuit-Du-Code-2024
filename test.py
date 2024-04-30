@@ -10,7 +10,9 @@ class Jeux:
         self.lune_menu = Soleil_lune (20, 20, 10, 7, 6)
         self.sapin_menu = Sapin(10,10,4,11)
         self.etoile_menu = [Etoile(78,26,7),Etoile(63,68,7),Etoile(36,110,7),Etoile(126,105,7),Etoile(118,67,7),Etoile(184,39,7),Etoile(142,16,7),Etoile(184,104,7),Etoile(173,83,7),Etoile(218,75,7)]
-        self.nuage = Nuage(50,100, 7, 6)
+        self.nuage_jeux_de_corde_1 = Nuage(50,100, 7, 6)
+        self.nuage_jeux_de_corde_2 = Nuage(175,75, 7, 6)
+        self.nuage_jeux_de_corde_3 = Nuage(121,113, 7, 6)
         pyxel.run(self.update, self.draw)
 
     def update(self):
@@ -19,6 +21,12 @@ class Jeux:
 
     def draw(self):
         pyxel.cls(0)
+        '''
+        #pour ping pong
+        pyxel.rect(0,0,256,256,5)
+        pyxel.rect(0,10,256,256,7)
+        '''
+        '''
         #Pour Menu
         pyxel.rect(0,0,256,256,1)
         pyxel.circ(256,1350,1220,15)
@@ -37,6 +45,7 @@ class Jeux:
             pyxel.pset(etoile.x + 1, etoile.y - 1, etoile.coul)
             pyxel.pset(etoile.x + 1, etoile.y + 1, etoile.coul)
             pyxel.pset(etoile.x + 2, etoile.y , etoile.coul)
+'''
         '''
         #perso
         pyxel.line(self.joueur.x, self.joueur.y - 11, self.joueur.x - 11, self.joueur.y - 4, self.joueur.coul_bras)
@@ -66,7 +75,7 @@ class Jeux:
         pyxel.circ(self.nuage.x + 16, self.nuage.y - 2, self.nuage.r, self.nuage.coul)
         '''
 
-'''
+
         #arriére plan jeux corde
         pyxel.rect(0,0,256,256,6)
         pyxel.circ(256,1350,1220,11)
@@ -87,7 +96,22 @@ class Jeux:
         pyxel.circ(self.soleil_jeux_corde.x, self.soleil_jeux_corde.y, self.soleil_jeux_corde.r, self.soleil_jeux_corde.coul_i)
         pyxel.circb(self.soleil_jeux_corde.x, self.soleil_jeux_corde.y, self.soleil_jeux_corde.r, self.soleil_jeux_corde.coul_e)
         pyxel.circb(self.soleil_jeux_corde.x, self.soleil_jeux_corde.y, self.soleil_jeux_corde.r - 1, self.soleil_jeux_corde.coul_e)
-'''
+
+        pyxel.circ(self.nuage_jeux_de_corde_1.x, self.nuage_jeux_de_corde_1.y, self.nuage_jeux_de_corde_1.r, self.nuage_jeux_de_corde_1.coul)
+        pyxel.circ(self.nuage_jeux_de_corde_1.x + 5, self.nuage_jeux_de_corde_1.y - 2, self.nuage_jeux_de_corde_1.r, self.nuage_jeux_de_corde_1.coul)
+        pyxel.circ(self.nuage_jeux_de_corde_1.x + 11, self.nuage_jeux_de_corde_1.y, self.nuage_jeux_de_corde_1.r, self.nuage_jeux_de_corde_1.coul)
+        pyxel.circ(self.nuage_jeux_de_corde_1.x + 16, self.nuage_jeux_de_corde_1.y - 2, self.nuage_jeux_de_corde_1.r, self.nuage_jeux_de_corde_1.coul)
+
+        pyxel.circ(self.nuage_jeux_de_corde_2.x, self.nuage_jeux_de_corde_2.y, self.nuage_jeux_de_corde_2.r, self.nuage_jeux_de_corde_2.coul)
+        pyxel.circ(self.nuage_jeux_de_corde_2.x + 5, self.nuage_jeux_de_corde_2.y - 2, self.nuage_jeux_de_corde_2.r, self.nuage_jeux_de_corde_2.coul)
+        pyxel.circ(self.nuage_jeux_de_corde_2.x + 11, self.nuage_jeux_de_corde_2.y, self.nuage_jeux_de_corde_2.r, self.nuage_jeux_de_corde_2.coul)
+        pyxel.circ(self.nuage_jeux_de_corde_2.x + 16, self.nuage_jeux_de_corde_2.y - 2, self.nuage_jeux_de_corde_2.r, self.nuage_jeux_de_corde_2.coul)
+
+        pyxel.circ(self.nuage_jeux_de_corde_3.x, self.nuage_jeux_de_corde_3.y, self.nuage_jeux_de_corde_3.r, self.nuage_jeux_de_corde_3.coul)
+        pyxel.circ(self.nuage_jeux_de_corde_3.x + 5, self.nuage_jeux_de_corde_3.y - 2, self.nuage_jeux_de_corde_3.r, self.nuage_jeux_de_corde_3.coul)
+        pyxel.circ(self.nuage_jeux_de_corde_3.x + 11, self.nuage_jeux_de_corde_3.y, self.nuage_jeux_de_corde_3.r, self.nuage_jeux_de_corde_3.coul)
+        pyxel.circ(self.nuage_jeux_de_corde_3.x + 16, self.nuage_jeux_de_corde_3.y - 2, self.nuage_jeux_de_corde_3.r, self.nuage_jeux_de_corde_3.coul)
+
 
 class Joueur:
     def __init__(self, x, y, coul_corp, coul_bras):
