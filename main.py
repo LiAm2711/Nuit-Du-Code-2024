@@ -8,7 +8,11 @@ class Jeu:
         
         self.bouton1 = Rectangle(32, 25, 192, 60, 7,decalageTexteX = 16, decalageTexteY = 4, couleurOmbre = 8)
         self.bouton2 = Rectangle(82, 83, 92, 60, 7,decalageTexteX = 16, decalageTexteY = 4, couleurOmbre = 8)
-        self.boutons = [self.bouton1, self.bouton2]
+        self.bouton3 = Rectangle(33, 150, 90, 30, 7,decalageTexteX = 16, decalageTexteY = 4, couleurOmbre = 8, action = Accueil, texte = "Ping-Pong")
+        self.bouton4 = Rectangle(132, 150, 90, 30, 7,decalageTexteX = 27, decalageTexteY = 4, couleurOmbre = 8, action = Accueil, texte = "Tir a la corde")        
+        self.bouton5 = Rectangle(33, 190, 90, 30, 7,decalageTexteX = 12, decalageTexteY = 4, couleurOmbre = 8, action = Accueil, texte = "Lancer")
+        self.bouton6 = Rectangle(132, 190, 90, 30, 7,decalageTexteX = 31, decalageTexteY = 4, couleurOmbre = 8, action = Accueil, texte = "Personnalisation")        
+        self.boutons = [self.bouton1, self.bouton2, self.bouton3, self.bouton4, self.bouton5, self.bouton6]
         
         pyxel.run(self.update, self.draw)
     
